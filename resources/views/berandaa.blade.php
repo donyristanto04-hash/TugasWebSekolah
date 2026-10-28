@@ -301,7 +301,7 @@
                             </div>
                             <div class="col">
                                 <div class="card h-100 activity-card">
-                                     <img src="/Riyal.jpg"
+                                     <img src="{{ asset('/Riyal.jpg') }}" alt="Foto Sekolah">
                                     <div class="card-body">
                                         <h5 class="card-title">Sosialisasi & pelatihan AI</h5>
                                         <small class="text-muted"><i class="bi bi-calendar"></i>14 Agustus
