@@ -1,22 +1,176 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>SMK PGRI Wlingi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            font-weight: 700;
+            white-space: nowrap;
+            min-width: 0;
+        }
+
+        .navbar-brand img {
+            object-fit: contain;
+        }
+
+        .home-carousel .carousel-item img {
+            display: block;
+            width: 100%;
+            height: clamp(220px, 35vw, 480px);
+            object-fit: cover;
+        }
+
+        body {
+            min-width: 320px;
+            overflow-x: clip;
+            background: #f5f7fb;
+        }
+
+        .navbar-collapse form[role="search"] {
+            min-width: 0;
+        }
+
+        .navbar-collapse form[role="search"] .form-control {
+            min-width: 0;
+        }
+
+        main.container>.row {
+            --bs-gutter-y: 1.5rem;
+        }
+
+        main.container .col-lg-9,
+        main.container .col-lg-3 {
+            min-width: 0;
+        }
+
+        .welcome-card,
+        .announcement-card,
+        .activities-panel {
+            border: 0;
+            border-radius: .85rem;
+            box-shadow: 0 8px 24px rgb(22 49 88 / 8%);
+            overflow: hidden;
+        }
+
+        .welcome-card__image {
+            width: 100%;
+            height: 100%;
+            min-height: 260px;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .activities-panel>.row {
+            padding: 1rem;
+        }
+
+        .activity-card img {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+        }
+
+        .activity-card .card-title {
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+        }
+
+        .announcement-card>h5 {
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .home-footer {
+            margin-top: 2rem;
+            padding-block: 1rem;
+        }
+
+        .home-footer .footer-column {
+            min-height: 64px;
+            padding: .5rem 1rem;
+        }
+
+        @media (max-width: 1199.98px) {
+            .navbar-collapse form[role="search"] {
+                margin: .75rem 0 0;
+            }
+
+            .navbar-collapse form[role="search"] .form-control {
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            main.container {
+                padding-inline: 1rem;
+            }
+
+            .welcome-card__image {
+                height: clamp(220px, 58vw, 360px);
+                min-height: 0;
+            }
+
+            .activities-panel>.row {
+                padding: .75rem;
+            }
+
+            .home-footer .footer-column {
+                min-height: 0;
+                padding: .85rem .5rem;
+                justify-content: flex-start !important;
+                border-right: 0 !important;
+                border-bottom: 1px solid rgb(255 255 255 / 20%);
+            }
+
+            .home-footer .footer-column:last-child {
+                border-bottom: 0;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .navbar-brand {
+                font-size: 1rem;
+            }
+
+            .navbar-brand img {
+                width: 44px;
+                height: 42px;
+            }
+
+            .home-carousel .carousel-item img {
+                height: clamp(160px, 55vw, 280px);
+            }
+
+            .navbar-brand img {
+                flex: 0 0 auto;
+            }
+
+            .card-body {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-xl bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
                 <img src="Logo.smk.png" alt="Logo SMK PGRI Wlingi" width="60" height="55" class="me-2">
-                <fw-bold>SMK PGRI Wlingi</fw-bold>
+                <strong>SMK PGRI Wlingi</strong>
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#homeNavbar"
+                aria-controls="homeNavbar" aria-expanded="false" aria-label="Buka navigasi">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="homeNavbar">
                 <ul class="navbar-nav mb-0">
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Beranda</a></li>
@@ -51,15 +205,15 @@
                     <li class="nav-item"><a class="nav-link" href="#">Galeri</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
                 </ul>
+                <form class="d-flex ms-xl-auto" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
         </div>
     </nav>
 
-    <div id="carouselExampleIndicators" class="carousel slide">
+    <div id="carouselExampleIndicators" class="carousel slide home-carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
@@ -70,15 +224,14 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="T1.jpg" class="d-block w-100" alt="Slide utama" width="2000" height="450">
+                <img src="smk.png" class="d-block w-100" alt="Slide utama" width="1920" height="600">
             </div>
             <div class="carousel-item">
                 <img src="https://i.ytimg.com/vi/7mAIHtunQqM/maxresdefault.jpg" class="d-block w-100"
-                    alt="Slide kedua" width="2000" height="450">
+                    alt="Slide kedua" width="1920" height="600">
             </div>
             <div class="carousel-item">
-                <img src="images (10).jpg"
-                    class="d-block w-100" alt="Slide ketiga" width="2000" height="450">
+                <img src="oni.png" class="d-block w-100" alt="Slide ketiga" width="1920" height="600">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -93,16 +246,16 @@
         </button>
     </div>
 
-    <br>
-    <div class="container">
+    <main class="container py-4">
         <div class="row">
-            <div class="col-md-9">
-                <div class="card mb-3" style="max-width: 990px;">
+            <div class="col-12 col-lg-9">
+                <div class="card welcome-card mb-3">
                     <div class="row g-0">
                         <h5 class="card-header">Sambutan Kepala sekolah <br> </h5>
                         <div class="col-md-4">
                             <img src="https://sikabar.smkpgriwlingi.sch.id/img/guru-putih/Drs.%20BAMBANG%20SETIYONO,%20ST,%20M.Pd.jpg"
-                                class="img-fluid rounded-start" alt="...">
+                                class="img-fluid rounded-start welcome-card__image"
+                                alt="Kepala sekolah SMK PGRI Wlingi">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
@@ -130,11 +283,11 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="card">
+                    <div class="card activities-panel">
                         <h5 class="card-header">Kegiatan Terbaru</h5>
-                        <div class="row row-cols-1 row-cols-md-4 g-4">
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-3">
                             <div class="col">
-                                <div class="card h-100">
+                                <div class="card h-100 activity-card">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGKuKdxHIABO2jw1gGRcRWGOMkx2kIJZmAiJOSZIiTrw&s=10"
                                         class="card-img-top" alt="...">
                                     <div class="card-body">
@@ -147,7 +300,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card h-100">
+                                <div class="card h-100 activity-card">
                                     <img src="riyal.jpg" class="card-img-top" alt="..." height="280">
                                     <div class="card-body">
                                         <h5 class="card-title">Sosialisasi & pelatihan AI</h5>
@@ -160,7 +313,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card h-100">
+                                <div class="card h-100 activity-card">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaVqyEGGxv6mIsWhLJ9D1O92u_omx8jiyhxAzywAFrhERRhKWWJu7Jbm-6&s=10"
                                         class="card-img-top" alt="..." height="">
                                     <div class="card-body">
@@ -173,7 +326,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card h-100">
+                                <div class="card h-100 activity-card">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpW2vK_7njImbj8zVeUoUaxEXPnUDop_O2h-xTl5nY6Q&s=10"
                                         class="card-img-top" alt="...">
                                     <div class="card-body">
@@ -192,11 +345,10 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="card">
+            <div class="col-12 col-lg-3">
+                <div class="card announcement-card">
                     <h5><i class="bi bi-megaphone-fill text-primary me-2">Pengumuman Terbaru </i></h5>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">An item</li>
 
                         <li class="list-group-item">Pendaftaran Peserta Didik Baru Tahun Ajaran 2025/2026
                             <br><small class="text-muted"><i class="bi bi-calendar"></i>13 Februari 2025</small>
@@ -217,13 +369,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
-    <footer class="fixed-bottom bg-dark text-white py-2">
+    <footer class="home-footer bg-dark text-white py-2">
         <div class="container-fluid">
             <div class="row align-items-center">
 
-                <div class="col-md-4 border-end">
+                <div class="col-12 col-md-4 border-end footer-column">
                     <div class="d-flex align-items-center">
                         <img src="Logo.smk.png" alt="Logo SMK PGRI Wlingi" width="55" height="50"
                             class="me-3">
@@ -235,7 +387,7 @@
                 </div>
 
                 <!-- Pengembang -->
-                <div class="col-md-4 border-end">
+                <div class="col-12 col-md-4 border-end footer-column">
                     <div class="d-flex justify-content-center align-items-center">
                         <i class="bi bi-code-slash fs-3 me-3"></i>
 
@@ -250,7 +402,7 @@
                 </div>
 
                 <!-- Copyright -->
-                <div class="col-md-4">
+                <div class="col-12 col-md-4 footer-column">
                     <div class="d-flex justify-content-center align-items-center">
                         <i class="bi bi-info-circle-fill fs-5 me-2"></i>
 

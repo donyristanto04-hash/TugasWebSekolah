@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('Coba');
+    return view('berandaa');
 });
 Route::get('/profil', function () {
     return view('profil');
