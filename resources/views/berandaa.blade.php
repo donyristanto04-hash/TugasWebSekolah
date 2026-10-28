@@ -289,7 +289,7 @@
                             <div class="col">
                                 <div class="card h-100 activity-card">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGKuKdxHIABO2jw1gGRcRWGOMkx2kIJZmAiJOSZIiTrw&s=10"
-                                        class="card-img-top" alt="...">
+                                        class="card-img-top" alt="..." height="280">
                                     <div class="card-body">
                                         <h5 class="card-title">Diesnatalis 39 Tahun </h5>
                                         <small class="text-muted"><i class="bi bi-calendar"></i>16 Juli 2026</small>
@@ -301,7 +301,7 @@
                             </div>
                             <div class="col">
                                 <div class="card h-100 activity-card">
-                                    <img src="riyal.jpg" class="card-img-top" alt="..." height="280">
+                                    <img src="Riyal.jpg" class="card-img-top" alt="..." height="280">
                                     <div class="card-body">
                                         <h5 class="card-title">Sosialisasi & pelatihan AI</h5>
                                         <small class="text-muted"><i class="bi bi-calendar"></i>14 Agustus
@@ -315,7 +315,7 @@
                             <div class="col">
                                 <div class="card h-100 activity-card">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaVqyEGGxv6mIsWhLJ9D1O92u_omx8jiyhxAzywAFrhERRhKWWJu7Jbm-6&s=10"
-                                        class="card-img-top" alt="..." height="">
+                                        class="card-img-top" alt="..." height="280">
                                     <div class="card-body">
                                         <h5 class="card-title">Classmeet & Pameran DKV</h5>
                                         <small class="text-muted"><i class="bi bi-calendar"></i>12 Juni 2026</small>
@@ -328,7 +328,7 @@
                             <div class="col">
                                 <div class="card h-100 activity-card">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpW2vK_7njImbj8zVeUoUaxEXPnUDop_O2h-xTl5nY6Q&s=10"
-                                        class="card-img-top" alt="...">
+                                        class="card-img-top" alt="..." height="280">
                                     <div class="card-body">
                                         <h5 class="card-title">Hari Kemerdekaan Ke 81</h5>
                                         <small class="text-muted"><i class="bi bi-calendar"></i>17 Agustus
